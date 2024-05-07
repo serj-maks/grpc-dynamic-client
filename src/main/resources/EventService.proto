@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.wso2.carbon.inbound.endpoint.protocol.grpc";
+
+package eventservice;
+
+service EventService {
+  rpc process (Event) returns (Event) {}
+}
+
+message Event {
+  optional string payload = 1;
+}
